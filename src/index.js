@@ -1,3 +1,3 @@
-const Dutils = require('./utils');
+const Agilely = require('./utils');
 
-module.exports = Dutils;
+module.exports = Agilely;

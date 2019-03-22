@@ -1,4 +1,17 @@
-const parseTime = function(time, cFormat) {
+/*
+ * @Author: faustun
+ * @Description: DateFormatter
+ * @Date: 2019-03-22 10:18:10
+ * @LastEditTime: 2019-03-22 15:31:21
+ */
+
+/**
+ * @description: parse time
+ * @param {Number} current time(Number of milliseconds from 1970.1.1)
+ * @param {String} conversion date format
+ * @return: Date of conversion
+ */
+const parseTime = function (time, cFormat) {
   if (arguments.length === 0) {
     return null
   }
@@ -22,7 +35,9 @@ const parseTime = function(time, cFormat) {
   const time_str = format.replace(/{(y|m|d|h|i|s|a)+}/g, (result, key) => {
     let value = formatObj[key]
     // Note: getDay() returns 0 on Sunday
-    if (key === 'a') { return ['日', '一', '二', '三', '四', '五', '六'][value ] }
+    if (key === 'a') {
+      return ['日', '一', '二', '三', '四', '五', '六'][value]
+    }
     if (result.length > 0 && value < 10) {
       value = '0' + value
     }
@@ -31,7 +46,13 @@ const parseTime = function(time, cFormat) {
   return time_str
 }
 
-const formatTime =  function(time, option) {
+/**
+ * @description: Conversion date format
+ * @param {Number} current time(Number of milliseconds from 1970.1.1)
+ * @param {String} date format
+ * @return: Date of conversion
+ */
+const formatTime = function (time, option) {
   // time = +time * 1000
   const d = new Date(time)
   const now = Date.now()
