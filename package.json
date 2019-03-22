@@ -1,0 +1,25 @@
+{
+  "name": "agilely",
+  "version": "1.0.0",
+  "description": "Front End Agile Development Toolkit",
+  "main": "./dist/Agilely.js",
+  "scripts": {
+    "build": "webpack --progress --colors --bail",
+    "prepublish": "in-publish && npm run build || not-in-publish"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "babel-eslint": "^10.0.1",
+    "babel-loader": "^8.0.4",
+    "copy-webpack-plugin": "^4.5.4",
+    "eslint": "^5.3.0",
+    "expose-loader": "^0.7.5",
+    "uglifyjs-webpack-plugin": "^1.2.7",
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.5"
+  },
+  "author": "faustun",
+  "license": "ISC"
+}
