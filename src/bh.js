@@ -2,7 +2,7 @@
  * @Author: faustun
  * @Description: file content
  * @Date: 2019-03-26 09:20:05
- * @LastEditTime: 2019-03-26 09:34:56
+ * @LastEditTime: 2019-03-26 09:51:24
  */
 
 /** Hexadecimal array for conversion. */
@@ -102,3 +102,8 @@ const binToHex = function (str) {
   }
   return value
 }
+
+module.exports = {
+  hexToBin: hexToBin,
+  binToHex: binToHex
+};
